@@ -31,13 +31,30 @@
 
 - (void)sendFirstPageRequest
 {
-    [self performSelector:@selector(doneLoadingCollectionViewData) withObject:nil afterDelay:3.0];
+    [self performSelector:@selector(doneFirstPageLoadingCollectionViewData) withObject:nil afterDelay:3.0];
+}
+
+- (void)sendNextPageRequest
+{
+    [self performSelector:@selector(doneLoadingMoreCollectionViewData) withObject:nil afterDelay:3.0];
 }
 
 - (void)doneLoadingCollectionViewData
 {
     NSArray *array = @[@"1", @"2", @"3", @"4", @"1", @"2", @"3", @"4", @"1", @"2", @"3", @"4", @"1", @"2", @"3", @"4"];
     [self finishLoadCollectionViewDataSource:array atPage:1];
+}
+
+- (void)doneFirstPageLoadingCollectionViewData
+{
+    NSArray *array = @[@"first"];
+    [self finishLoadCollectionViewDataSource:array atPage:1];
+}
+
+- (void)doneLoadingMoreCollectionViewData
+{
+    NSArray *array = @[@"more"];
+    [self finishLoadCollectionViewDataSource:nil atPage:2];
 }
 
 

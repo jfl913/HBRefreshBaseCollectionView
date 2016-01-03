@@ -8,6 +8,7 @@
 
 #import "HBRefreshBaseCollectionView.h"
 #import "EGORefreshTableHeaderView.h"
+#import <SVPullToRefresh.h>
 
 #define kRefreshHeaderViewHeight 176
 
@@ -31,6 +32,10 @@
         self.collectionView.dataSource = self;
         self.collectionView.backgroundColor = [UIColor lightGrayColor];
         [self.collectionView addSubview:self.refreshHeaderView];
+        __weak typeof(self) weakSelf = self;
+        [self.collectionView addInfiniteScrollingWithActionHandler:^{
+            [weakSelf loadMoreDataSource];
+        }];
         [self addSubview:self.collectionView];
         
         self.modelsArray = [@[] mutableCopy];
@@ -44,6 +49,7 @@
     self.currentPage = currentPage;
     self.isLoading = NO;
     [self.refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.collectionView];
+    [self.collectionView.infiniteScrollingView stopAnimating];
     
     if (currentPage == 1) {
         [self.modelsArray removeAllObjects];
@@ -69,6 +75,13 @@
     self.isLoading = YES;
     if ([self.refreshDelegate respondsToSelector:@selector(sendFirstPageRequest)]) {
         [self.refreshDelegate sendFirstPageRequest];
+    }
+}
+
+- (void)loadMoreDataSource
+{
+    if ([self.refreshDelegate respondsToSelector:@selector(sendNextPageRequest)]) {
+        [self.refreshDelegate sendNextPageRequest];
     }
 }
 

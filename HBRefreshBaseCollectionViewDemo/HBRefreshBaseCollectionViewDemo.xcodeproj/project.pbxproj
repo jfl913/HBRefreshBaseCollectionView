@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B5C2C83519D20D479A715D9 /* libPods-HBRefreshBaseCollectionViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86687B3C6AB88B691ACDEA48 /* libPods-HBRefreshBaseCollectionViewDemo.a */; };
 		B64D96911C3949BE009A05CF /* TestCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64D96901C3949BE009A05CF /* TestCollectionView.m */; };
 		B64D96951C395A82009A05CF /* TestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B64D96931C395A82009A05CF /* TestCollectionViewCell.m */; };
 		B64D96961C395A82009A05CF /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64D96941C395A82009A05CF /* TestCollectionViewCell.xib */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54F9F71424E5EF2D8028828D /* Pods-HBRefreshBaseCollectionViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBRefreshBaseCollectionViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBRefreshBaseCollectionViewDemo/Pods-HBRefreshBaseCollectionViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		86687B3C6AB88B691ACDEA48 /* libPods-HBRefreshBaseCollectionViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HBRefreshBaseCollectionViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64D968F1C3949BE009A05CF /* TestCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCollectionView.h; sourceTree = "<group>"; };
 		B64D96901C3949BE009A05CF /* TestCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCollectionView.m; sourceTree = "<group>"; };
 		B64D96921C395A82009A05CF /* TestCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewCell.h; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		B65AFB7D1C39069700306553 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
 		B65AFB7F1C3906C200306553 /* HBRefreshBaseCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBRefreshBaseCollectionView.h; sourceTree = "<group>"; };
 		B65AFB801C3906C200306553 /* HBRefreshBaseCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBRefreshBaseCollectionView.m; sourceTree = "<group>"; };
+		D7FA78BFBA69A9C1854D0BD9 /* Pods-HBRefreshBaseCollectionViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBRefreshBaseCollectionViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBRefreshBaseCollectionViewDemo/Pods-HBRefreshBaseCollectionViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B5C2C83519D20D479A715D9 /* libPods-HBRefreshBaseCollectionViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40BE7F6DCF5390901F3AB232 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86687B3C6AB88B691ACDEA48 /* libPods-HBRefreshBaseCollectionViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FE654E01475FA4A70DE3B44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7FA78BFBA69A9C1854D0BD9 /* Pods-HBRefreshBaseCollectionViewDemo.debug.xcconfig */,
+				54F9F71424E5EF2D8028828D /* Pods-HBRefreshBaseCollectionViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B65AFB3C1C3905EA00306553 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +121,8 @@
 				B65AFB611C3905EB00306553 /* HBRefreshBaseCollectionViewDemoTests */,
 				B65AFB6C1C3905EB00306553 /* HBRefreshBaseCollectionViewDemoUITests */,
 				B65AFB461C3905EA00306553 /* Products */,
+				4FE654E01475FA4A70DE3B44 /* Pods */,
+				40BE7F6DCF5390901F3AB232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B65AFB721C3905EB00306553 /* Build configuration list for PBXNativeTarget "HBRefreshBaseCollectionViewDemo" */;
 			buildPhases = (
+				8CEBC2581A347DA095FBE235 /* Check Pods Manifest.lock */,
 				B65AFB411C3905EA00306553 /* Sources */,
 				B65AFB421C3905EA00306553 /* Frameworks */,
 				B65AFB431C3905EA00306553 /* Resources */,
+				74D0C5F2C115B15EC4A97DC7 /* Embed Pods Frameworks */,
+				BAC9250BF9DE332BEB7A76FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,6 +323,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74D0C5F2C115B15EC4A97DC7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HBRefreshBaseCollectionViewDemo/Pods-HBRefreshBaseCollectionViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CEBC2581A347DA095FBE235 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BAC9250BF9DE332BEB7A76FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HBRefreshBaseCollectionViewDemo/Pods-HBRefreshBaseCollectionViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B65AFB411C3905EA00306553 /* Sources */ = {
@@ -445,6 +520,7 @@
 		};
 		B65AFB731C3905EB00306553 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7FA78BFBA69A9C1854D0BD9 /* Pods-HBRefreshBaseCollectionViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HBRefreshBaseCollectionViewDemo/Info.plist;
@@ -457,6 +533,7 @@
 		};
 		B65AFB741C3905EB00306553 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F9F71424E5EF2D8028828D /* Pods-HBRefreshBaseCollectionViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HBRefreshBaseCollectionViewDemo/Info.plist;

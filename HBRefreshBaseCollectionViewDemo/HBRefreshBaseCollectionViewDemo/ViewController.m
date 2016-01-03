@@ -31,7 +31,7 @@
     if (!_testCollectionView) {
         CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
         CGFloat height = CGRectGetHeight([UIScreen mainScreen].bounds);
-        _testCollectionView = [[TestCollectionView alloc] initWithFrame:CGRectMake(0, 0, width, height) collectionViewLayout:[UICollectionViewFlowLayout new]];
+        _testCollectionView = [[TestCollectionView alloc] initWithFrame:CGRectMake(0, 20, width, height -20) collectionViewLayout:[UICollectionViewFlowLayout new]];
     }
     
     return _testCollectionView;
