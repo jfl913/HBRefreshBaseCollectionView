@@ -20,7 +20,6 @@
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
         self.refreshDelegate = self;
-//        [self.collectionView registerClass:[TestCollectionViewCell class] forCellWithReuseIdentifier:@"TestCollectionViewCell"];
         [self.collectionView registerNib:[UINib nibWithNibName:@"TestCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"TestCollectionViewCell"];
         [self doneLoadingCollectionViewData];
     }
